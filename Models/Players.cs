@@ -16,6 +16,7 @@ namespace WebApplication28.Models
         public int? Tid { get; set; }
 
         public virtual Teams T { get; set; }
+
         public virtual ICollection<PlayerProfile> PlayerProfile { get; set; }
     }
 }
