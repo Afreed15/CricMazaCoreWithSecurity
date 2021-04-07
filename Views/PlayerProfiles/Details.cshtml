@@ -1,0 +1,55 @@
+﻿@model WebApplication28.Models.PlayerProfile
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+<h4>PlayerProfile</h4>
+<hr />
+<div class="display: block; margin-left: auto;margin-right: auto;width: 50%;">
+    <h1 class="text-center text-white bg-dark">@Html.DisplayFor(model => model.P.Tplayer)&nbsp;&nbsp;&nbsp; Profile</h1>
+</div>
+<ul style="list-style-type:none;display: block; margin-left: 500px;margin-right: 500px;width: 50%;">
+
+    <li><img src="@("/Images/"+Model.P.Img)" height="250" width="250" /></li>
+
+
+
+    <li><b class="text-danger">Country :&nbsp;&nbsp;@Html.DisplayFor(model => model.Country)</b></li>
+
+    <li><b class="text-danger">IPL Team :&nbsp;&nbsp; @Html.DisplayFor(model => model.T.Tname)</b></li>
+
+
+
+
+
+
+
+
+    <li> <b class="text-danger">Role :&nbsp;&nbsp;  @Html.DisplayFor(model => model.Role)</b></li>
+
+    <li><b class="text-danger"> Highest Score :&nbsp;&nbsp;  @Html.DisplayFor(model => model.HighestScore)</b></li>
+
+    <li><b class="text-danger">Best Bowling :&nbsp;&nbsp;  @Html.DisplayFor(model => model.BestBowling)</b></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Profileid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

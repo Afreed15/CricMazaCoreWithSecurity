@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebApplication28.Models.Matches>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Team1
+                </th>
+                <th>
+                    Team2
+                </th>
+                <th>
+                    Match b/w
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Time
+                </th>
+                <th>
+                    Venue
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="bg-info">
+
+                        <b>@Html.DisplayFor(modelItem => item.Team1Navigation.Tname)</b>
+                    </td>
+                    <td class="bg-success">
+                        <b>@Html.DisplayFor(modelItem => item.Team2Navigation.Tname)</b>
+                    </td>
+                    <td>
+                        <b>@Html.DisplayFor(modelItem => item.MatchList)</b>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mdate)
+                    </td>
+                    <td>
+                        <b>@Html.DisplayFor(modelItem => item.Mtime)</b>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Venue)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Mid">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Mid">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Mid">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+            <video width="320" height="240" controls>
+                <source src="~/Images/ipl3.mp4" type="video/mp4">
+
+            </video>
+
+        </div>
+        <div class="col-sm">
+
+            <video width="320" height="240" controls>
+                <source src="~/Images/WhatsApp Video 2021-04-06 at 9.30.41 PM.mp4" type="video/mp4">
+
+            </video>
+
+        </div>
+        <div class="col-sm">
+
+            <video width="320" height="240" controls>
+                <source src="~/Images/WhatsApp Video 2021-04-06 at 9.19.35 PM.mp4" type="video/mp4">
+
+            </video>
+
+        </div>
+    </div>
+</div>

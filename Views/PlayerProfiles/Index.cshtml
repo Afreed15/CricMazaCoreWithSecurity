@@ -1,0 +1,60 @@
+﻿@model IEnumerable<WebApplication28.Models.PlayerProfile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>
+
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Role
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.P)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@("/Images/"+item.P.Img)" width="100" height="100" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Role)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.T.Tname)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Profileid">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Profileid">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Profileid">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div> 

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplication28.Models.Teams>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-center text-info">
+    <img src="~/Images/srh.jpg" height="100" width="100" />
+    <img src="~/Images/rcb.png" height="100" width="100" /><img src="~/Images/Dc.png" height="100" width="100" />
+    IPL 2021<img src="~/Images/mi.png" height="100" width="100" />
+    <img src="~/Images/csk.png" height="100" width="100" />
+    <img src="~/Images/rr.jpg" height="100" width="100" />
+</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Team Logo
+                </th>
+
+                <th>
+                    Team Name
+                </th>
+                <th>
+                    Owner
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="mx-auto" style="width: 200px;">
+                    <td>
+                        <img src="@("/Images/"+item.Teamlogo)" style="border:solid 2px" class="img-thumbnail" width="150" height="150" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Towner)
+                    </td>
+
+
+                    <td>
+                        @*<a asp-action="Edit" asp-route-id="@item.Tid">Edit</a> |
+                            <a asp-action="Details" asp-controller="" asp-route-id="@item.Tid">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Tid">Delete</a>|*@
+                        <a asp-action="Display" asp-controller="Players" asp-route-id="@item.Tid"><b>view Team</b></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
