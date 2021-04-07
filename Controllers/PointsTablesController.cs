@@ -25,6 +25,11 @@ namespace WebApplication28.Controllers
             var cricMaza21Context = _context.PointsTable.Include(p => p.T);
             return View(await cricMaza21Context.ToListAsync());
         }
+        public IActionResult Display()
+        {
+            var result = _context.PointsTable.OrderByDescending(x => x.Points).Include(p=>p.T).ToList();
+            return View(result);
+        }
 
         // GET: PointsTables/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -116,7 +121,7 @@ namespace WebApplication28.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Display));
             }
             ViewData["Tid"] = new SelectList(_context.Teams, "Tid", "Tname", pointsTable.Tid);
             return View(pointsTable);
