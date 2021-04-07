@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\mvccoreproject\\SecMVCcoreproject\\WebApplication28\\WebApplication28.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\mvccoreproject\\mvcsecurity\\WebApplication28.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\mvccoreproject\\SecMVCcoreproject\\WebApplication28\\WebApplication28.csproj": {
+    "C:\\Users\\DELL\\Desktop\\mvccoreproject\\mvcsecurity\\WebApplication28.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\mvccoreproject\\SecMVCcoreproject\\WebApplication28\\WebApplication28.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\mvccoreproject\\mvcsecurity\\WebApplication28.csproj",
         "projectName": "WebApplication28",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\mvccoreproject\\SecMVCcoreproject\\WebApplication28\\WebApplication28.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\mvccoreproject\\mvcsecurity\\WebApplication28.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\mvccoreproject\\SecMVCcoreproject\\WebApplication28\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\mvccoreproject\\mvcsecurity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

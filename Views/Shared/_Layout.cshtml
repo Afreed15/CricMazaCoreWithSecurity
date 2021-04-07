@@ -21,18 +21,23 @@
 
 
             <div class="container">
-                <a class="navbar-brand" style="margin-left:120px" asp-controller="Home" asp-action="Index">CricMazaServerDb</a>
+                
 
 
 
                 <ol class="navbar-brand" style="text-decoration:none">
 
                     <li class="navbar-brand" style="margin-left:20px">
+                        <a class="navbar-brand"  asp-controller="Home" asp-action="Index"><b>CricMazaServerDb</b></a>
                         <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Teams" asp-action="Index"><img src="~/Images/cricket.png" width="25" height="25" /><b>Teams</b></a>
                         <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Players" asp-action="Index"><img src="~/Images/cricket-player-with-bat.png" width="25" height="25" /><b>Players</b></a>
                         <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="PlayerProfiles" asp-action="Index"><img src="~/Images/group.png" width="25" height="25" /><b>PlayerProfiles</b></a>
                         <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="PointsTables" asp-action="Index"><img src="~/Images/tableicon.webp" width="25" height="25" /><b>Points Table</b></a>
                         <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Matches" asp-action="Index"><img src="~/Images/Matchesicon.jpg" width="25" height="25" /><b>Matches</b></a>
+                        <a class="navbar-brand" style="color:#F23557" asp-area="Identity" asp-page="/Account/Login"><img src="~/Images/login.png" width="25" height="25" /><b>Login</b></a>
+                        <form class="navbar-brand" style="color:#F23557" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <button type="submit" class="nav-link btn btn-link text-dark"><img src="~/Images/logout.png" width="25" height="25" /><b>Logout</b></button>
+                        </form>
                     </li>
                 </ol>
             </div>
