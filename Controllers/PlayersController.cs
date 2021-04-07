@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +15,12 @@ namespace WebApplication28.Controllers
     public class PlayersController : Controller
     {
         private readonly CricMaza21Context _context;
+        private readonly IWebHostEnvironment _hostEnviroment;
 
-        public PlayersController(CricMaza21Context context)
+        public PlayersController(CricMaza21Context context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnviroment = hostEnvironment;
         }
 
         // GET: Players
@@ -63,10 +67,17 @@ namespace WebApplication28.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Pid,Tplayer,Img,Tid")] Players players)
+        public async Task<IActionResult> Create([Bind("Pid,Tplayer,Img,Tid,PPicFile")] Players players)
         {
             if (ModelState.IsValid)
             {
+                string rootPath = _hostEnviroment.WebRootPath;
+
+                string fileName = Path.GetFileName(players.PPicFile.FileName);
+                string pPath = Path.Combine(rootPath + "/Images/", fileName);
+                players.Img = fileName;
+                var filStream = new FileStream(pPath, FileMode.Create);
+                await players.PPicFile.CopyToAsync(filStream);
                 _context.Add(players);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
