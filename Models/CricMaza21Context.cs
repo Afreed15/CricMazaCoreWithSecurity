@@ -15,7 +15,7 @@ namespace WebApplication28.Models
         {
         }
 
-        public virtual DbSet<Login> Login { get; set; }
+      
         public virtual DbSet<Matches> Matches { get; set; }
         public virtual DbSet<PlayerProfile> PlayerProfile { get; set; }
         public virtual DbSet<Players> Players { get; set; }
@@ -34,26 +34,7 @@ namespace WebApplication28.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Login>(entity =>
-            {
-                entity.HasKey(e => e.Lid)
-                    .HasName("PK__login__C6505B392CA143C6");
-
-                entity.ToTable("login");
-
-                entity.Property(e => e.Lrole)
-                    .HasColumnName("LRole")
-                    .HasMaxLength(50);
-
-                entity.Property(e => e.UserName)
-                    .IsRequired()
-                    .HasMaxLength(50);
-
-                entity.Property(e => e.UserPwd)
-                    .IsRequired()
-                    .HasColumnName("UserPWd")
-                    .HasMaxLength(50);
-            });
+           
 
             modelBuilder.Entity<Matches>(entity =>
             {
