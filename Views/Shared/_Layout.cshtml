@@ -18,31 +18,32 @@
             <img src="~/Images/Cricmaza Logo.png" width="200" height="200" style="float:left" />
             <h1 style="font-family:'Times New Roman', Times, serif;font-size:xx-large;text-align:center;color:white"><b></b></h1>
 
+            <nav class="navbar navbar-expand-lg navbar-light bg-light>
+
+                <div class="container">
 
 
-            <div class="container">
 
 
+                    <ol class="navbar-brand" style="text-decoration:none">
 
+                        <li class="navbar-brand" style="margin-left:20px">
+                            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><b>CricMazaServerDb</b></a>
+                            <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Teams" asp-action="Index"><img src="~/Images/cricket.png" width="25" height="25" /><b>Teams</b></a>
+                            <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Players" asp-action="Index"><img src="~/Images/cricket-player-with-bat.png" width="25" height="25" /><b>Players</b></a>
+                            <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="PlayerProfiles" asp-action="Index"><img src="~/Images/group.png" width="25" height="25" /><b>PlayerProfiles</b></a>
+                            <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="PointsTables" asp-action="Index"><img src="~/Images/tableicon.webp" width="25" height="25" /><b>Points Table</b></a>
+                            <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Matches" asp-action="Index"><img src="~/Images/Matchesicon.jpg" width="25" height="25" /><b>Matches</b></a>
+                            <a class="navbar-brand" style="color:#F23557" asp-area="Identity" asp-page="/Account/Login"><img src="~/Images/login.png" width="25" height="25" /><b>Login</b></a>
+                            <form class="navbar-brand" style="color:#F23557" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="nav-link btn btn-link text-dark"><img src="~/Images/logout.png" width="25" height="25" /><b style="color:#F23557">Logout</b></button>
+                            </form>
 
-                <ol class="navbar-brand" style="text-decoration:none">
+                        </li>
+                    </ol>
 
-                    <li class="navbar-brand" style="margin-left:20px">
-                        <a class="navbar-brand" asp-controller="Home" asp-action="Index"><b>CricMazaServerDb</b></a>
-                        <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Teams" asp-action="Index"><img src="~/Images/cricket.png" width="25" height="25" /><b>Teams</b></a>
-                        <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Players" asp-action="Index"><img src="~/Images/cricket-player-with-bat.png" width="25" height="25" /><b>Players</b></a>
-                        <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="PlayerProfiles" asp-action="Index"><img src="~/Images/group.png" width="25" height="25" /><b>PlayerProfiles</b></a>
-                        <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="PointsTables" asp-action="Index"><img src="~/Images/tableicon.webp" width="25" height="25" /><b>Points Table</b></a>
-                        <a class="navbar-brand" style="color:#F23557" asp-area="" asp-controller="Matches" asp-action="Index"><img src="~/Images/Matchesicon.jpg" width="25" height="25" /><b>Matches</b></a>
-                        <a class="navbar-brand" style="color:#F23557" asp-area="Identity" asp-page="/Account/Login"><img src="~/Images/login.png" width="25" height="25" /><b>Login</b></a>
-                        <form class="navbar-brand" style="color:#F23557" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                            <button type="submit" class="nav-link btn btn-link text-dark"><img src="~/Images/logout.png" width="25" height="25" /><b style="color:#F23557">Logout</b></button>
-                        </form>
-                       
-                    </li>
-                </ol>
-               
-            </div>
+                </div>
+            </nav>
         </div>
 
 
