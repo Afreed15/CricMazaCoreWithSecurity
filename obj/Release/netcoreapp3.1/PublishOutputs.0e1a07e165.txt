@@ -41,6 +41,7 @@ C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTm
 C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\logout.png
 C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\Matchesicon.jpg
 C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\Mayank Agarwal.jpg
+C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\mi vs rcb.jpeg
 C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\mi.png
 C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\Moeen Ali.jpg
 C:\Users\DELL\Desktop\mvccoreproject\mvcsecurity\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Images\Mohammad Siraj.jpg
