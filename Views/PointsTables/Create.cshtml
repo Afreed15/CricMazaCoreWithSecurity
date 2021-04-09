@@ -9,16 +9,16 @@
 <h4>PointsTable</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 bg-info">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Ptid" class="control-label"></label>
+                <label asp-for="Ptid" class="control-label">ID</label>
                 <input asp-for="Ptid" class="form-control" />
                 <span asp-validation-for="Ptid" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Tid" class="control-label"></label>
+                <label asp-for="Tid" class="control-label">Team Name</label>
                 <select asp-for="Tid" class ="form-control" asp-items="ViewBag.Tid"></select>
             </div>
             <div class="form-group">
