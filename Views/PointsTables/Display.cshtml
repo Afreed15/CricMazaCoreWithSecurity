@@ -4,13 +4,15 @@
     ViewData["Title"] = "Display";
 }
 
-<marquee behavior="scroll" direction="left"><h2 class="text-center text-info">
-    <img src="~/Images/srh.jpg" height="100" width="100" />
-    <img src="~/Images/rcb.jpg" height="100" width="100" /><img src="~/Images/Dc.png" height="100" width="100" />
-    &nbsp;&nbsp;&nbsp;&nbsp;<b>Points Table&nbsp;&nbsp;&nbsp;&nbsp;</b><img src="~/Images/mi.png" height="100" width="100" />
-    <img src="~/Images/csk.png" height="100" width="100" />
-    <img src="~/Images/rr.jpg" height="100" width="100" />
-</h2></marquee>
+<marquee behavior="scroll" direction="left">
+    <h2 class="text-center text-info">
+        <img src="~/Images/srh.jpg" height="100" width="100" />
+        <img src="~/Images/rcb.jpg" height="100" width="100" /><img src="~/Images/Dc.png" height="100" width="100" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>Points Table&nbsp;&nbsp;&nbsp;&nbsp;</b><img src="~/Images/mi.png" height="100" width="100" />
+        <img src="~/Images/csk.png" height="100" width="100" />
+        <img src="~/Images/rr.jpg" height="100" width="100" />
+    </h2>
+</marquee>
 <hr />
 <p>
     <a asp-action="Create">Create New</a>
@@ -19,7 +21,7 @@
     <thead>
         <tr>
             <th>
-               Team Name 
+                Team Name
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Played)
@@ -36,39 +38,45 @@
             <th>
                 @Html.DisplayNameFor(model => model.Points)
             </th>
-            
+
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                <img src="@("/Images/"+item.T.Teamlogo)" width="50" height="50" />
-                @Html.DisplayFor(modelItem => item.T.Tname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Played)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NetRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Win)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Loss)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
-            
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Ptid">Edit</a> |
-               
-                <a asp-action="Delete" asp-route-id="@item.Ptid">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@("/Images/"+item.T.Teamlogo)" width="50" height="50" />
+                    @Html.DisplayFor(modelItem => item.T.Tname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Played)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NetRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Win)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Loss)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Points)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Ptid">Edit</a> |
+
+                    <a asp-action="Delete" asp-route-id="@item.Ptid">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<div id="score-frame"><a rel="nofollow" href="https://www.crictimes.org/cricket-scores">Live Cricket Scores</a></div>
+<div id="score-frame"><a rel="nofollow" href="https://www.crictimes.org/cricket-scores">Live Cricket Scores</a></div>
+<script type="text/javascript">
+var html = document.getElementById('score-frame'); html.innerHTML =
+        '<iframe src="https://cwidget.crictimes.org/?v=1.1&a=000000&c=434343&bo=000000&b=000000" style="width:100%;min-height: 460px;" frameborder="0" scrolling="yes"></iframe>';</script>
