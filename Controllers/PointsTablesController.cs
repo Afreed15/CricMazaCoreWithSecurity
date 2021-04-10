@@ -27,7 +27,7 @@ namespace WebApplication28.Controllers
         }
         public IActionResult Display()
         {
-            var result = _context.PointsTable.OrderByDescending(x => x.Points).Include(p=>p.T).ToList();
+            var result = _context.PointsTable.OrderByDescending(x => x.Points).ThenByDescending(n=>n.NetRate).Include(p=>p.T).ToList();
             return View(result);
         }
 
